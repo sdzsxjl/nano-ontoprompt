@@ -20,9 +20,9 @@ from app.services.encryption_service import decrypt
 MODEL_ID   = "dd837230-70ad-4784-bcbe-e30ae8679866"
 MODEL_NAME = "deepseek-chat"
 
-TARGET_NAMES = ["财务域", "医疗域", "营销域", "HR域",
+TARGET_NAMES = ["财务域", "医疗域", "营销域", "HR域"
                 "供应链知识图谱-LLM提取"]
-
+# TARGET_NAMES = ["供应链知识图谱-LLM提取"]
 
 def fuzzy_resolve(name: str, name_to_id: dict):
     if not name:
