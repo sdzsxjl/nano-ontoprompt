@@ -1,5 +1,6 @@
 # nano-ontoprompt
 ## Git PR Practice
+## Rebase Practice Feature
 **[English Documentation](./README.md)**
 
 一个轻量级、借鉴 Palantir Foundry 设计的领域本体构建平台。接入数据源,经过可视化转换管道处理,将清洗后的数据集映射为实体类型,最终生成可探索的知识图谱——包含实体、关系、逻辑规则与可执行动作。//.
