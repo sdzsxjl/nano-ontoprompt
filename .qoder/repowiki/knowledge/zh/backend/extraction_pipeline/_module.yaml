@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: backend/extraction_pipeline
+title: extraction_pipeline
+scope:
+    - backend/app/routers/extraction.py
+    - backend/app/schemas/extraction.py
+    - backend/app/models/extraction_task.py
+    - backend/app/tasks/extraction.py
+    - backend/app/services/document_service.py
+source_files: []
+depends_on: []
+related_to: []

@@ -4,7 +4,7 @@ def convert_to_markdown(file_path: str, mime_type: str) -> str:
     ext = os.path.splitext(file_path)[1].lower()
 
     # For plain text formats, read directly — no conversion needed
-    if ext in ('.md', '.txt') or (mime_type and ('text/plain' in mime_type or 'text/markdown' in mime_type)):
+    if ext in ('.md', '.txt', '.owl', '.rdf', '.ttl', '.nt', '.n3') or (mime_type and ('text/plain' in mime_type or 'text/markdown' in mime_type or 'rdf' in mime_type or 'turtle' in mime_type)):
         try:
             with open(file_path, 'r', encoding='utf-8', errors='replace') as f:
                 return f.read()

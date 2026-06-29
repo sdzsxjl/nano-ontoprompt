@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: backend/connections_mappings
+title: connections_mappings
+scope:
+    - backend/app/routers/v2/connections.py
+    - backend/app/routers/v2/mappings.py
+    - backend/app/tasks/v2/connection_sync.py
+    - backend/app/tasks/v2/mapping_apply.py
+    - backend/app/models/v2/connection.py
+    - backend/app/models/v2/mapping.py
+source_files: []
+depends_on: []
+related_to: []

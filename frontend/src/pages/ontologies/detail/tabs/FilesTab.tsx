@@ -56,6 +56,10 @@ export default function FilesTab({ ontologyId }: { ontologyId: string }) {
       'image/jpeg': ['.jpg', '.jpeg'],
       'text/markdown': ['.md'],
       'text/plain': ['.txt'],
+      'application/rdf+xml': ['.owl', '.rdf'],
+      'text/turtle': ['.ttl'],
+      'application/n-triples': ['.nt'],
+      'text/n3': ['.n3'],
     },
     multiple: true,
   })
