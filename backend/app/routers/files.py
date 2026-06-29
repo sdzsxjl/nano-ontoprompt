@@ -67,9 +67,12 @@ async def upload_file(
         converted_md=converted,
     )
     import_result = None
+    owl_file = is_owl_like_file(save_path)
+    owl_attempted = False
     try:
         db.add(db_file)
-        if is_owl_like_file(save_path):
+        if owl_file:
+            owl_attempted = True
             import_result = import_owl_graph(db, ontology_id, save_path)
         db.commit()
         db.refresh(db_file)
@@ -77,7 +80,7 @@ async def upload_file(
         db.rollback()
         if os.path.exists(save_path):
             os.remove(save_path)
-        if is_owl_like_file(save_path):
+        if owl_attempted:
             raise HTTPException(400, f"OWL import failed: {e}")
         raise
 

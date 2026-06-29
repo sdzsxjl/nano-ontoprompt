@@ -2,7 +2,7 @@ name: Python CI
 
 on:
   push:
-    branches: [ "master", "main" ]
+    branches: [ "master", "main", "p-*" ]
   pull_request:
     branches: [ "master", "main" ]
 
@@ -19,5 +19,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Check Python syntax
-        run: python -m compileall .
+      - name: Install dependencies
+        run: pip install -r backend/requirements.txt
+
+      - name: Run tests
+        run: cd backend && python -m pytest --tb=short

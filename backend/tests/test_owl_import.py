@@ -1,7 +1,7 @@
 def test_upload_owl_imports_entities_and_relations(client, auth_headers):
     ontology = client.post(
         "/api/v1/ontologies",
-        json={"name": "OWL Import", "domain": "鍏朵粬"},
+        json={"name": "OWL Import", "domain": "其他"},
         headers=auth_headers,
     ).json()["data"]
 
