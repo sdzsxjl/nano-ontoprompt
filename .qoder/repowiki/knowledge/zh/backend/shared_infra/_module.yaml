@@ -1,0 +1,14 @@
+schema_version: 1
+module_path: backend/shared_infra
+title: shared_infra
+scope:
+    - backend/app/main.py
+    - backend/app/config.py
+    - backend/app/database.py
+    - backend/app/deps.py
+    - backend/alembic.ini
+    - backend/Dockerfile
+    - backend/requirements.txt
+source_files: []
+depends_on: []
+related_to: []

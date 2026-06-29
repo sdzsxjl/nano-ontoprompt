@@ -7,6 +7,7 @@ from app.models.file import UploadedFile
 from app.models.ontology import OntologyProject
 from app.schemas.file import FileOut
 from app.services.document_service import convert_to_markdown
+from app.services.owl_import_service import import_owl_graph, is_owl_like_file
 from app.config import settings
 
 router = APIRouter()
@@ -65,7 +66,23 @@ async def upload_file(
         mime_type=mime,
         converted_md=converted,
     )
-    db.add(db_file); db.commit(); db.refresh(db_file)
+    import_result = None
+    try:
+        db.add(db_file)
+        if is_owl_like_file(save_path):
+            import_result = import_owl_graph(db, ontology_id, save_path)
+        db.commit()
+        db.refresh(db_file)
+    except Exception as e:
+        db.rollback()
+        if os.path.exists(save_path):
+            os.remove(save_path)
+        if is_owl_like_file(save_path):
+            raise HTTPException(400, f"OWL import failed: {e}")
+        raise
+
+    if import_result:
+        return {"data": FileOut.model_validate(db_file).model_dump(), "import": import_result}
     return {"data": FileOut.model_validate(db_file).model_dump()}
 
 @router.delete("/{file_id}", status_code=204)

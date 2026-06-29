@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: backend/auth_users
+title: 用户认证与权限管理
+scope:
+    - backend/app/routers/auth.py
+    - backend/app/routers/users.py
+    - backend/app/schemas/auth.py
+    - backend/app/schemas/user.py
+    - backend/app/services/auth_service.py
+source_files: []
+depends_on: []
+related_to: []

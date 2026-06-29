@@ -1,0 +1,188 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: p-5-user-login
+nodes_managed: true
+exported_at: "2026-06-25T03:35:19Z"
+modules:
+    backend:
+        dir_name: backend
+        title: backend
+        scope:
+            - backend/
+        source_files: []
+        children:
+            - backend/auth_users
+            - backend/connections_mappings
+            - backend/datasets_pipelines
+            - backend/extraction_pipeline
+            - backend/files_export_overview
+            - backend/graph_search
+            - backend/logic_actions
+            - backend/ontologies_entities
+            - backend/prompts_model_config
+            - backend/shared_infra
+        depends_on: []
+        related_to: []
+    backend/auth_users:
+        dir_name: 用户认证与权限管理
+        title: 用户认证与权限管理
+        scope:
+            - backend/app/routers/auth.py
+            - backend/app/routers/users.py
+            - backend/app/schemas/auth.py
+            - backend/app/schemas/user.py
+            - backend/app/services/auth_service.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/connections_mappings:
+        dir_name: connections_mappings
+        title: connections_mappings
+        scope:
+            - backend/app/routers/v2/connections.py
+            - backend/app/routers/v2/mappings.py
+            - backend/app/tasks/v2/connection_sync.py
+            - backend/app/tasks/v2/mapping_apply.py
+            - backend/app/models/v2/connection.py
+            - backend/app/models/v2/mapping.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/datasets_pipelines:
+        dir_name: datasets_pipelines
+        title: datasets_pipelines
+        scope:
+            - backend/app/routers/v2/datasets.py
+            - backend/app/routers/v2/pipelines.py
+            - backend/app/routers/v2/incremental.py
+            - backend/app/services/v2/dataset_service.py
+            - backend/app/models/v2/dataset.py
+            - backend/app/models/v2/pipeline.py
+            - backend/app/tasks/v2/pipeline_run.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/extraction_pipeline:
+        dir_name: extraction_pipeline
+        title: extraction_pipeline
+        scope:
+            - backend/app/routers/extraction.py
+            - backend/app/schemas/extraction.py
+            - backend/app/models/extraction_task.py
+            - backend/app/tasks/extraction.py
+            - backend/app/services/document_service.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/files_export_overview:
+        dir_name: files_export_overview
+        title: files_export_overview
+        scope:
+            - backend/app/routers/files.py
+            - backend/app/routers/export.py
+            - backend/app/routers/overview.py
+            - backend/app/schemas/file.py
+            - backend/app/models/file.py
+            - backend/app/services/export_service.py
+            - backend/app/services/storage_service.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/graph_search:
+        dir_name: graph_search
+        title: graph_search
+        scope:
+            - backend/app/routers/graph.py
+            - backend/app/routers/v2/graph.py
+            - backend/app/routers/v2/search.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/logic_actions:
+        dir_name: logic_actions
+        title: logic_actions
+        scope:
+            - backend/app/routers/logic.py
+            - backend/app/routers/actions.py
+            - backend/app/schemas/logic.py
+            - backend/app/schemas/action.py
+            - backend/app/models/logic.py
+            - backend/app/models/action.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/ontologies_entities:
+        dir_name: 本体与实体管理
+        title: 本体与实体管理
+        scope:
+            - backend/app/routers/ontologies.py
+            - backend/app/routers/entities.py
+            - backend/app/schemas/ontology.py
+            - backend/app/schemas/entity.py
+            - backend/app/models/ontology.py
+            - backend/app/models/entity.py
+            - backend/app/models/relation.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/prompts_model_config:
+        dir_name: prompts_model_config
+        title: prompts_model_config
+        scope:
+            - backend/app/routers/prompts.py
+            - backend/app/routers/models.py
+            - backend/app/routers/settings.py
+            - backend/app/schemas/prompt.py
+            - backend/app/schemas/model_config.py
+            - backend/app/models/prompt.py
+            - backend/app/models/model_config.py
+            - backend/app/models/rules_config.py
+            - backend/app/services/llm_service.py
+            - backend/app/services/model_config_selector.py
+            - backend/app/services/encryption_service.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/shared_infra:
+        dir_name: shared_infra
+        title: shared_infra
+        scope:
+            - backend/app/main.py
+            - backend/app/config.py
+            - backend/app/database.py
+            - backend/app/deps.py
+            - backend/alembic.ini
+            - backend/Dockerfile
+            - backend/requirements.txt
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    frontend:
+        dir_name: frontend
+        title: frontend
+        scope:
+            - frontend/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    test_data:
+        dir_name: test_data
+        title: test_data
+        scope:
+            - test_data/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

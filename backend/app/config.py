@@ -13,7 +13,7 @@ class Settings(BaseSettings):
 
     # 上传限制
     max_upload_mb: int = 200
-    allowed_upload_extensions: str = "csv,xlsx,xls,json,xml,pdf,docx,doc,pptx,ppt,md,txt"
+    allowed_upload_extensions: str = "csv,xlsx,xls,json,xml,owl,rdf,ttl,nt,n3,pdf,docx,doc,pptx,ppt,md,txt"
 
     # v2 — Neo4j
     neo4j_uri: str = "bolt://localhost:7687"

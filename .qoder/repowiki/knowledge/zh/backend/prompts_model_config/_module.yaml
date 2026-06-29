@@ -1,0 +1,18 @@
+schema_version: 1
+module_path: backend/prompts_model_config
+title: prompts_model_config
+scope:
+    - backend/app/routers/prompts.py
+    - backend/app/routers/models.py
+    - backend/app/routers/settings.py
+    - backend/app/schemas/prompt.py
+    - backend/app/schemas/model_config.py
+    - backend/app/models/prompt.py
+    - backend/app/models/model_config.py
+    - backend/app/models/rules_config.py
+    - backend/app/services/llm_service.py
+    - backend/app/services/model_config_selector.py
+    - backend/app/services/encryption_service.py
+source_files: []
+depends_on: []
+related_to: []

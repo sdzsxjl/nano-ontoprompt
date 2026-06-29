@@ -1,0 +1,14 @@
+schema_version: 1
+module_path: backend/files_export_overview
+title: files_export_overview
+scope:
+    - backend/app/routers/files.py
+    - backend/app/routers/export.py
+    - backend/app/routers/overview.py
+    - backend/app/schemas/file.py
+    - backend/app/models/file.py
+    - backend/app/services/export_service.py
+    - backend/app/services/storage_service.py
+source_files: []
+depends_on: []
+related_to: []

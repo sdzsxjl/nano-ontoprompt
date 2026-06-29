@@ -1,0 +1,14 @@
+schema_version: 1
+module_path: backend/datasets_pipelines
+title: datasets_pipelines
+scope:
+    - backend/app/routers/v2/datasets.py
+    - backend/app/routers/v2/pipelines.py
+    - backend/app/routers/v2/incremental.py
+    - backend/app/services/v2/dataset_service.py
+    - backend/app/models/v2/dataset.py
+    - backend/app/models/v2/pipeline.py
+    - backend/app/tasks/v2/pipeline_run.py
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: backend/logic_actions
+title: logic_actions
+scope:
+    - backend/app/routers/logic.py
+    - backend/app/routers/actions.py
+    - backend/app/schemas/logic.py
+    - backend/app/schemas/action.py
+    - backend/app/models/logic.py
+    - backend/app/models/action.py
+source_files: []
+depends_on: []
+related_to: []
